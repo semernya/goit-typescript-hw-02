@@ -1,0 +1,12 @@
+.image {
+    border-radius: 20px;
+}
+
+.socials {
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 40px;
+    padding: 10px;
+}

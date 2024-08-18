@@ -1,0 +1,35 @@
+.header {
+    background-color: #01786F;
+    border-radius: 30px;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    
+}
+
+.input {
+    padding: 0 5px;
+}
+
+.input,
+.btn {
+    border-radius: 10px;
+    border: none;
+    height: 30px;
+} 
+
+.input:hover {
+    background-color: #cdfefa;
+} 
+
+.btn:hover,
+.btn:focus {
+    color: #01786F;
+    background-color: #cdfefa;
+    cursor: pointer;
+}
