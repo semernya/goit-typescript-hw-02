@@ -14,7 +14,17 @@ const customStyles = {
 
 Modal.setAppElement('#root');
 
-export default function ImageModal({ img, likes, user, modalState, onClose }) {
+import { Image } from '../../types';
+
+interface ImageModalProps {
+    img: Image['urls']['regular'],
+    likes: Image['likes'],
+    user: Image['user']['instagram_username'],
+    modalState: boolean,
+    onClose: () => void;
+}
+
+export default function ImageModal({ img, likes, user, modalState, onClose }: ImageModalProps) {
     return (
         <div>
             <Modal isOpen={modalState} onRequestClose={onClose} style={customStyles} >

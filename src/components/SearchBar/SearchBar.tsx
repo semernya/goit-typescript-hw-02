@@ -2,12 +2,17 @@ import css from './SearchBar.module.css'
 import { Formik, Field, Form } from 'formik';
 import toast, { Toaster } from 'react-hot-toast';
 
-export default function SearchBar({ onInput, toastState }) {
+interface SearchBarProps {
+    onInput: (newQuery: string) => void;
+    toastState: (toast: number) => void;
+}
+
+export default function SearchBar({ onInput, toastState }: SearchBarProps) {
 
     const handleSubmit = (values, actions) => {
         onInput(values.query);
         if (values.query === '') {
-            toastState(true)
+            toastState(true);
             toast.error('Please enter your search query!');
             return;
         }
